@@ -1,0 +1,116 @@
+﻿<Page
+	x:Class="TelegramClient.SettingsPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:TelegramClient"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	d:DesignHeight="768"
+	d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="TELEGRAM" FontSize="20" FontWeight="SemiBold"/>
+            <TextBlock Text="settings" Margin="9,-7,0,0" FontSize="28" FontWeight="Bold"/>
+        </StackPanel>
+
+        <!-- Content Panel -->
+        <ScrollViewer Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel Width="440">
+
+                <!-- Theme Settings -->
+                <TextBlock Text="Theme" 
+                          FontSize="20"
+                          Margin="0,20,0,10"/>
+
+                <ListBox x:Name="ThemeListBox" SelectionChanged="ThemeSelected" FontSize="28">
+                    <ListBoxItem x:Name="ThemeLight" Content="Light Theme"/>
+                    <ListBoxItem x:Name="ThemeDark" Content="Dark Theme"/>
+                    <ListBoxItem x:Name="ThemeBlue" Content="Blue Theme"/>
+                </ListBox>
+
+                <!-- Notifications -->
+                <TextBlock Text="Notifications" 
+                          FontSize="20"
+                          Margin="0,30,0,10"/>
+
+                <StackPanel>
+                    <CheckBox x:Name="EnableNotifications" 
+                             Content="Enable Push Notifications"
+                             Checked="NotificationsToggle_Changed"
+                             Unchecked="NotificationsToggle_Changed"/>
+
+                    <CheckBox x:Name="SoundEnabled" 
+                             Content="Notification Sound"
+                             Checked="SoundToggle_Changed"
+                             Unchecked="SoundToggle_Changed"
+                             Margin="0,10,0,0"/>
+
+                    <CheckBox x:Name="VibrationEnabled" 
+                             Content="Vibration"
+                             Checked="VibrationToggle_Changed"
+                             Unchecked="VibrationToggle_Changed"
+                             Margin="0,10,0,0"/>
+                </StackPanel>
+
+                <!-- Chat Settings -->
+                <TextBlock Text="Chat Settings" 
+                          FontSize="20"
+                          Margin="0,30,0,10"/>
+
+                <StackPanel>
+                    <CheckBox x:Name="EnterToSend" 
+                             Content="Enter key sends message"
+                             Checked="EnterToSend_Changed"
+                             Unchecked="EnterToSend_Changed"/>
+
+                    <CheckBox x:Name="AutoDownload" 
+                             Content="Auto-download media"
+                             Checked="AutoDownload_Changed"
+                             Unchecked="AutoDownload_Changed"
+                             Margin="0,10,0,0"/>
+
+                    <TextBlock Text="Font Size"
+                              FontSize="16"
+                              Margin="0,20,0,5"/>
+
+                    <ListBox x:Name="FontSizeListBox" SelectionChanged="FontSizeSelected">
+                        <ListBoxItem Content="Small"/>
+                        <ListBoxItem Content="Medium"/>
+                        <ListBoxItem Content="Large"/>
+                    </ListBox>
+                </StackPanel>
+
+                <!-- App Info -->
+                <TextBlock Text="App Information" 
+                          FontSize="20"
+                          Margin="0,30,0,10"/>
+
+                <StackPanel>
+                    <TextBlock Text="{Binding AppVersion}" 
+                              FontSize="16"/>
+                    <TextBlock Text="Melegram7 by ChockingNetDude" 
+                              FontSize="16"
+                              Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+
+                    <TextBlock Text="Melegram for W10M by [M]edia[E]xplorer" 
+                       FontSize="16"
+                       Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+
+                    <Button Content="Clear Cache" 
+                           Click="ClearCache_Click"
+                           Margin="0,10,0,0"/>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
