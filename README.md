@@ -24,7 +24,7 @@ My fast & dirty R.E. of Melegram7 app and making UWP app for Windows 10 Mobile..
 ## Tech. details
 - App type: UWP
 - Win. SDK used: 19041
-- Min. Win SDK used: 14393
+- Min. Win SDK used: 10240
 
 ## References / Credits / Thanks
 - ChockingNetDude :: developer of Melegram7 (Melegram for Windows Phone 7)
@@ -38,6 +38,6 @@ My fast & dirty R.E. of Melegram7 app and making UWP app for Windows 10 Mobile..
 As is. No support. RnD it yourself.
 
 ## .
-[M][E] Nov, 11 2025
+[M][E] Nov, 19 2025
 
 ![](/Images/footer.png)
