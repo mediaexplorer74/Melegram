@@ -1,4 +1,4 @@
-## Melegram 2.1.1 - v2 branch
+## Melegram 2.1.1 - dev branch
 
 ![](/Images/logo.png)
 
