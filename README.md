@@ -1,4 +1,4 @@
-## Melegram 2.1.1 - v2 branch
+## Melegram 2.1.1 - master
 
 ![](/Images/logo.png)
 
@@ -24,7 +24,6 @@ RC. The correction of the authorization verification logic has been applied and 
 ## Screenshots
 ![](/Images/sshot01.png)
 ![](/Images/sshot02.png)
-![](/Images/sshot03.png)
 
 ## Tech. details
 - App type: UWP
