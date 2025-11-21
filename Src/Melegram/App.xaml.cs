@@ -131,7 +131,6 @@ namespace TelegramClient
 
         protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            //await appStartup();
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
@@ -152,8 +151,16 @@ namespace TelegramClient
                 Window.Current.Content = rootFrame;
             }
 
-
-            rootFrame.Navigate(typeof(MainPage), e.Arguments);
+            // Check if user token exists before navigating to MainPage
+            string userToken = IsolatedStorageHelper.GetValue<string>("user_token");
+            if (string.IsNullOrEmpty(userToken))
+            {
+                rootFrame.Navigate(typeof(WelcomePage), e.Arguments);
+            }
+            else
+            {
+                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+            }
 
             // Ensure the current window is active
             Window.Current.Activate();

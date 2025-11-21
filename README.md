@@ -1,8 +1,12 @@
-## Melegram 2.1.0 - v2 branch
+## Melegram 2.1.1 - v2 branch
 
 ![](/Images/logo.png)
 
 My fast & dirty R.E. of Melegram7 app and making UWP app for Windows 10 Mobile... 
+
+
+## Status
+RC. The correction of the authorization verification logic has been applied and now the application must correctly check for the token at startup and go to the welcome page (WelcomePage) if it is missing.
 
 
 ## Functional features
@@ -20,6 +24,7 @@ My fast & dirty R.E. of Melegram7 app and making UWP app for Windows 10 Mobile..
 ## Screenshots
 ![](/Images/sshot01.png)
 ![](/Images/sshot02.png)
+![](/Images/sshot03.png)
 
 ## Tech. details
 - App type: UWP
@@ -38,6 +43,6 @@ My fast & dirty R.E. of Melegram7 app and making UWP app for Windows 10 Mobile..
 As is. No support. RnD it yourself.
 
 ## .
-[M][E] Nov, 19 2025
+[M][E] Nov, 21 2025
 
 ![](/Images/footer.png)
